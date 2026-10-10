@@ -1,97 +1,68 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# HUỲNH TRUNG HIẾU · MSSV 23734711 · https://github.com/langocthan/23734711_TH2.git · Stamp #043948 · Số cuối 1 — VARIANT B
 
-# Getting Started
+# KTXGo — THỰC HÀNH 2
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Ứng dụng React Native CLI đặt món và giao đến phòng ký túc xá. Project này được tạo mới cho TH2, độc lập với ShopAI.
 
-## Step 1: Start Metro
+## Thông tin cá nhân hóa
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- Họ tên: **HUỲNH TRUNG HIẾU**
+- MSSV: **23734711**
+- Stamp: **043948**
+- Seed: `711`
+- Phòng giao: `P.411`
+- Ô đăng nhập: số điện thoại
+- Thứ tự tab: Cửa hàng → Giỏ → Tôi
+- Haptic khi thêm món: selection
+- Công thức ship: B
+- Chi tiết món: card
+- Debounce tìm kiếm: `400 ms`
+- React Query stale time: `21.000 ms`
+- Hệ số giá: `30.500`
+- Phí ship cơ bản: `9.000 đ`
+- ID ảnh banner: `511`
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Các giá trị trên được tính từ [src/constants/student.ts](./src/constants/student.ts). Repo nộp bài: [langocthan/23734711_TH2](https://github.com/langocthan/23734711_TH2).
 
-```sh
-# Using npm
+## Yêu cầu môi trường
+
+- Node.js `>= 22.11.0`
+- JDK 17
+- Android Studio, Android SDK và một Android Emulator
+
+## Cài đặt và chạy Android
+
+```powershell
+npm install
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+Mở terminal thứ hai tại thư mục project:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+```powershell
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+Ở lần chạy đầu, Gradle cần tải các thư viện Android và biên dịch native modules; việc này có thể mất vài phút. Để chạy nhanh hơn trên emulator hiện tại:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```powershell
+npm run android -- --active-arch-only
 ```
 
-Then, and every time you update your native dependencies, run:
+Ứng dụng hiển thị danh mục mẫu gồm cơm tấm, trà sữa, bút bi và mì ly, với màu khung riêng cho từng sản phẩm. Home kiểm tra kết nối Fake Store API trước khi hiển thị danh mục; khi mất mạng sẽ hiện MSSV, thông báo lỗi và nút **Thử lại**. Cho phép vị trí khi được hỏi để tính phí giao hàng; trên emulator có thể đặt tọa độ giả lập trong **Extended controls → Location**. Nếu quyền vị trí bị chặn, mở trang Cài đặt ứng dụng từ tab **Tôi**.
 
-```sh
-bundle exec pod install
+## Kiểm tra
+
+```powershell
+npm test -- --runInBand
+npx tsc --noEmit
+npm run lint
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## Trước khi nộp bài
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Kiểm tra repo GitHub `23734711_TH2` và chép link clone HTTPS vào đề thi.
+- Thực hiện tối thiểu bốn commit trong giờ thi, mỗi commit message có MSSV và `TH2`; không force-push.
+- Chụp ảnh màn hình trang Cửa hàng và Giỏ, lưu thành `docs/screenshot-th2-home.png` và `docs/screenshot-th2-cart.png`.
+- Đẩy source lên repo, kiểm tra link clone HTTPS và chép link vào đề thi.
+- Không đưa thông tin đăng nhập, token hay bí mật vào repo.
